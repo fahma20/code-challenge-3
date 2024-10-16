@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+    fetchMovieDetails(1); 
+    loadFilms(); 
+});
+
 function fetchMovieDetails(filmId) {
     fetch(`http://localhost:3000/films/${filmId}`)
         .then(response => {
@@ -22,15 +27,11 @@ function updateMovieDetails(movie) {
     document.getElementById('showtime').innerText = movie.showtime;
 
     const availableTickets = movie.capacity - movie.tickets_sold;
-    document.getElementById('ticket-num').innerText = availableTickets; // Display available tickets
+    document.getElementById('ticket-num').innerText = availableTickets; 
     document.getElementById('film-info').innerText = movie.description;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    Films();
-});
-
-function Films() {
+function loadFilms() {
     fetch('http://localhost:3000/films')
         .then(response => response.json())
         .then(films => {
@@ -55,8 +56,8 @@ function createFilmItem(film) {
     const filmLi = document.createElement('li');
     filmLi.className = 'film item';
     filmLi.dataset.id = film.id; 
-    filmLi.dataset.ticketsSold = film.tickets_sold; // Ensure this is set
-    filmLi.dataset.capacity = film.capacity; // Ensure this is set
+    filmLi.dataset.ticketsSold = film.tickets_sold; 
+    filmLi.dataset.capacity = film.capacity; 
 
     const titleSpan = document.createElement('span');
     titleSpan.innerText = film.title;
@@ -92,7 +93,6 @@ function buyTicket(event) {
     if (ticketsSold < capacity) {
         ticketsSold += 1; 
         
-        
         fetch(`http://localhost:3000/films/${filmId}`, {
             method: 'PATCH',
             headers: {
@@ -108,8 +108,10 @@ function buyTicket(event) {
         })
         .then(updatedFilm => {
             console.log('Updated film data:', updatedFilm);
-            filmLi.dataset.ticketsSold = updatedFilm.tickets_sold; // Update the dataset
+            filmLi.dataset.ticketsSold = updatedFilm.tickets_sold; 
             
+            const availableTickets = updatedFilm.capacity - updatedFilm.tickets_sold;
+            document.getElementById('ticket-num').innerText = availableTickets; 
             
             return fetch('http://localhost:3000/tickets', {
                 method: 'POST',

@@ -6,7 +6,7 @@
       "runtime": "101",
       "capacity": 40,
       "showtime": "09:00PM",
-      "tickets_sold": 33,
+      "tickets_sold": 34,
       "description": "A young man meets a farm girl who is actually a witch.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/43468/p43468_v_v8_aa.jpg"
     },
@@ -19,16 +19,6 @@
       "tickets_sold": 46,
       "description": "The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/4232/p4232_v_v8_aa.jpg"
-    },
-    {
-      "id": "6",
-      "title": "Track Of The Moon Beast",
-      "runtime": "112",
-      "capacity": 30,
-      "showtime": "10:30PM",
-      "tickets_sold": 16,
-      "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
-      "poster": "https://www.gstatic.com/tv/thumb/v22vodart/39804/p39804_v_v8_ab.jpg"
     },
     {
       "id": "7",
@@ -72,16 +62,6 @@
       "showing_id": "12"
     },
     {
-      "id": "13",
-      "title": "Wild Rebels",
-      "runtime": "100",
-      "capacity": 40,
-      "showtime": "09:00PM",
-      "tickets_sold": 31,
-      "description": "A stock car driver goes undercover as the wheel man for a motorcycle gang.",
-      "poster": "https://www.gstatic.com/tv/thumb/v22vodart/45367/p45367_v_v8_aa.jpg"
-    },
-    {
       "id": "14",
       "title": "Danger: Diabolik",
       "runtime": "111",
@@ -97,7 +77,7 @@
       "runtime": "98",
       "capacity": 50,
       "showtime": "04:45PM",
-      "tickets_sold": 33,
+      "tickets_sold": 34,
       "description": "Delinquent teen-agers ingest a substance and grow thirty feet tall, then proceed to take over a small town.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/37991/p37991_v_v8_aa.jpg"
     }
